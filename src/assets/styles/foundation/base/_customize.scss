@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  @include font-family;
+  font-size: $font_size_init;
+  color: $main_color;
+}
+
+body {
+  line-height: 1.5;
+  background-color: $base_color;
+  font-size: $font_size_M;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+}
+
+dialog {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+}

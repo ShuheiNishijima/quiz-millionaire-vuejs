@@ -1,0 +1,25 @@
+
+@mixin font-family {
+  font-family: YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
+}
+
+$font_size_init: 62.5%;
+$font_size_4XS:  1.0rem;
+$font_size_3XS:  1.1rem;
+$font_size_2XS:  1.2rem;
+$font_size_XS:   1.3rem;
+$font_size_SS:   1.4rem;
+$font_size_S:    1.5rem;
+$font_size_M:    1.6rem;
+$font_size_L:    1.8rem;
+$font_size_LL:   2.0rem;
+$font_size_XL:   2.2rem;
+$font_size_2XL:  2.4rem;
+$font_size_3XL:  2.6rem;
+$font_size_4XL:  2.8rem;
+$font_size_5XL:  3.0rem;
+$font_size_6XL:  3.2rem;
+$font_size_7XL:  3.4rem;
+$font_size_8XL:  3.6rem;
+$font_size_9XL:  3.8rem;
+$font_size_10XL: 4.0rem;

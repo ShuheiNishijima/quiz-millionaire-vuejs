@@ -1,0 +1,13 @@
+$point: 768px;
+
+@mixin media-sp {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+@mixin media-pc {
+  @media (min-width: $point + 1) {
+    @content;
+  }
+}

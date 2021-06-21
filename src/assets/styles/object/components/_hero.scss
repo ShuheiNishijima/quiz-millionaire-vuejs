@@ -1,0 +1,93 @@
+.hero {
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1024px;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(#311B92, $base_color);
+  transform: translate(-50%, -50%);
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(#448AFF, 0.7) inset;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(#90CAF9, 0.5);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero__line {
+  >span {
+    display: block;
+    position: absolute;
+    width: 750px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgba(#FFEB3B, 0.1);
+    border-radius: 50%;
+    @for $index from 1 through 9 {
+      &:nth-of-type(#{$index}) {
+        transform: translate(-50%, -50%) rotateZ(#{19 * $index}deg);
+      }
+    }
+  }
+}
+
+.hero__circle {
+  >span {
+    display: block;
+    position: absolute;
+    width: 700px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(#3F51B5, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 100px #3F51B5;
+    @for $index from 1 through 8 {
+      &:nth-of-type(#{$index}) {
+        transform: translate(-50%, -50%) rotateZ(#{23 * $index}deg);
+      }
+    }
+  }
+}
+
+.hero__dot {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::before {
+    box-shadow: 0 0 100px rgba(#9C27B0, 0.9);
+  }
+  &::after {
+    box-shadow: 0 0 100px rgba(#9C27B0, 0.5) inset;
+  }
+}

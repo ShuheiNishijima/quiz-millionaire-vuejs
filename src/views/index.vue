@@ -6,12 +6,12 @@
 
 <script>
 // @ is an alias to /src
-import CButton from "@/components/CButton/CButton.vue";
+import CButton from '@/components/CButton/CButton.vue'
 
 export default {
-  name: "Index",
+  name: 'Index',
   components: {
     CButton,
   },
-};
+}
 </script>
