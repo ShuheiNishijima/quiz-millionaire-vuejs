@@ -1,6 +1,6 @@
 <template>
   <button class="c-button" @click="$emit('click')">
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
