@@ -3,7 +3,7 @@
     <c-logo />
     <div class="challenge-main__inner">
       <c-question v-if="items.length" :text="items[count].question" />
-      <c-choices v-if="items.length" :items="items[count].choices" />
+      <c-choices v-if="items.length" :items="items[count].choices" @click="selectChoice" />
     </div>
   </div>
 </template>

@@ -13,6 +13,7 @@ export default {
     return {
       count: 0,
       items: [],
+      selected: null,
     }
   },
   created() {
@@ -23,6 +24,9 @@ export default {
       const REQUEST_URL = '/json/quiz.json'
       const response = await this.axios(REQUEST_URL)
       this.items = response.data.quiz[0].items
+    },
+    selectChoice(index) {
+      this.selected = index
     },
   },
 }

@@ -5,9 +5,13 @@
 
 .c-choices {
   width: 100%;
+  @include media-sp {
+    margin-bottom: 10px;
+  }
   @include media-pc {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 30px;
   }
 }
 
