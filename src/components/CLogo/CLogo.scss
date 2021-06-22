@@ -1,0 +1,22 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include media-sp {
+    width: 120%;
+  }
+  @include media-pc {
+    width: 80%;
+  }
+}
+
+.c-logo__image {
+  width: 100%;
+  height: auto;
+}

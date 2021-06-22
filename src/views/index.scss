@@ -1,0 +1,12 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.challenge-main__inner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+}

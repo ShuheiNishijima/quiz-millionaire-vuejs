@@ -1,0 +1,42 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-choices {
+  width: 100%;
+  @include media-pc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-choices__item {
+  @include media-sp {
+    width: 100%;
+  }
+  @include media-pc {
+    width: 50%;
+  }
+  &:not(:last-child) {
+    @include media-sp {
+      margin-bottom: 10px;
+    }
+  }
+  &:nth-child(1),
+  &:nth-child(2) {
+    @include media-pc {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.c-choices__button {
+  width: 100%;
+  padding: 15px 10px;
+  background-color: rgba(#000, 0.5);
+  font-size: $font_size_LL;
+  text-align-last: left;
+  border: 2px solid $accent_color;
+  cursor: pointer;
+}
