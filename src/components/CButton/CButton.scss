@@ -3,20 +3,21 @@
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
-.c-question {
+
+.c-button {
   width: 100%;
   background-color: rgba(#000, 0.5);
   backdrop-filter: blur(5px);
+  text-align-last: left;
   border: 2px solid $accent_color;
   border-radius: 2px;
+  cursor: pointer;
   @include media-sp {
-    margin-bottom: 20px;
     padding: 10px;
-    font-size: $font_size_LL;
+    font-size: $font_size_M;
   }
   @include media-pc {
-    margin-bottom: 30px;
-    padding: 20px;
-    font-size: $font_size_2XL;
+    padding: 15px;
+    font-size: $font_size_LL;
   }
 }

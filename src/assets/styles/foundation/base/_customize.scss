@@ -12,6 +12,7 @@ html {
   @include font-family;
   font-size: $font_size_init;
   color: $main_color;
+  word-break: break-all;
 }
 
 body {
@@ -42,6 +43,7 @@ dialog {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  color: inherit;
 }
 
 img {

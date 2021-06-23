@@ -33,14 +33,14 @@
       margin-bottom: 20px;
     }
   }
-}
-
-.c-choices__button {
-  width: 100%;
-  padding: 15px 10px;
-  background-color: rgba(#000, 0.5);
-  font-size: $font_size_LL;
-  text-align-last: left;
-  border: 2px solid $accent_color;
-  cursor: pointer;
+  &:nth-child(2n) {
+    @include media-pc {
+      padding-left: 10px;
+    }
+  }
+  &:nth-child(2n - 1) {
+    @include media-pc {
+      padding-right: 10px;
+    }
+  }
 }

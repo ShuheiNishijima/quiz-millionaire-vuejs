@@ -3,7 +3,7 @@
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
-.challenge-main__inner {
+.views-main {
   position: absolute;
   width: 100%;
   left: 0;
@@ -16,4 +16,20 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+.views-start-button {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+.views-button-list {
+  display: flex;
+  width: 100%;
+}
+
+.views-button-list__item {
+  width: 50%;
 }

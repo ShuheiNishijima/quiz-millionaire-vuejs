@@ -1,0 +1,41 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-start-button {
+  animation-name: brink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  min-width: 320px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+  @include media-sp {
+    font-size: $font_size_LL;
+  }
+  @include media-pc {
+    font-size: $font_size_5XL;
+  }
+  &::before {
+    content: '─';
+    text-shadow: 0 0 5px #000;
+  }
+  &::after {
+    content: '─';
+    text-shadow: 0 0 5px #000;
+  }
+}
+
+@keyframes brink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
