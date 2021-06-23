@@ -14,7 +14,6 @@
   cursor: pointer;
   @include media-sp {
     padding: 10px;
-    font-size: $font_size_M;
   }
   @include media-pc {
     padding: 15px;

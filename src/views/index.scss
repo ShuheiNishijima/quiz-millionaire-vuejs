@@ -25,11 +25,34 @@
   transform: translateX(-50%);
 }
 
+.views-text {
+  margin-bottom: 20px;
+}
+
 .views-button-list {
-  display: flex;
   width: 100%;
+  @include media-pc {
+    display: flex;
+  }
 }
 
 .views-button-list__item {
-  width: 50%;
+  @include media-pc {
+    width: 50%;
+  }
+  &:nth-child(odd) {
+    @include media-pc {
+      padding-right: 10px;
+    }
+  }
+  &:nth-child(even) {
+    @include media-pc {
+      padding-left: 10px;
+    }
+  }
+  &:not(:last-child) {
+    @include media-sp {
+      margin-bottom: 10px;
+    }
+  }
 }

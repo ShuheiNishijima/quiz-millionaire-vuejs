@@ -1,5 +1,6 @@
 import CButton from '@/components/CButton/CButton.vue'
 import CChoices from '@/components/CChoices/CChoices.vue'
+import CCutin from '@/components/CCutin/CCutin.vue'
 import CDialog from '@/components/CDialog/CDialog.vue'
 import CLogo from '@/components/CLogo/CLogo.vue'
 import CQuestion from '@/components/CQuestion/CQuestion.vue'
@@ -10,6 +11,7 @@ export default {
   components: {
     CButton,
     CChoices,
+    CCutin,
     CDialog,
     CLogo,
     CQuestion,
@@ -21,6 +23,7 @@ export default {
       playing: false,
       count: 0,
       selected: null,
+      cutin: false,
       check_dialog: false,
       correct_dialog: false,
       miss_dialog: false,
@@ -55,11 +58,19 @@ export default {
     },
     correct() {
       this.check_dialog = false
-      this.correct_dialog = true
+      this.cutin = true
+      setTimeout(() => {
+        this.cutin = false
+        this.correct_dialog = true
+      }, 3000)
     },
     miss() {
       this.check_dialog = false
-      this.miss_dialog = true
+      this.cutin = true
+      setTimeout(() => {
+        this.cutin = false
+        this.miss_dialog = true
+      }, 3000)
     },
     nextQuestion() {
       this.correct_dialog = false
