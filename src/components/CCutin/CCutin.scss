@@ -16,6 +16,7 @@
 }
 
 .c-cutin__outer {
+  z-index: $cutin;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,8 +59,7 @@
 .c-cutin__bg {
   width: 100%;
   height: 100%;
-  background-color: rgba(#000, 0.2);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(5px);
 }
 
 .fade-enter-active,
