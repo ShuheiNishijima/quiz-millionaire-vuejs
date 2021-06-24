@@ -17,7 +17,7 @@
       </ul>
     </c-dialog>
     <c-dialog :dialog="correct_dialog">
-      <img src="/images/seikai.jpg" alt="せいかーい！！！" />
+      <img class="views-image" src="/images/seikai.jpg" alt="せいかーい！！！" />
       <p class="views-text">
         正解ッッッ！！！<br />
         次の問題に進みますか？
@@ -30,7 +30,7 @@
       </ul>
     </c-dialog>
     <c-dialog :dialog="miss_dialog">
-      <img src="/images/zannen.jpg" alt="ざんねーん！！！" />
+      <img class="views-image" src="/images/zannen.jpg" alt="ざんねーん！！！" />
       <p class="views-text">残念ッッッ！！！</p>
       <ul class="views-button-list">
         <li class="views-button-list__item"><c-button @click="restartHandler">再挑戦</c-button></li>

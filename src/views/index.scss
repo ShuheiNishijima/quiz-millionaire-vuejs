@@ -1,4 +1,5 @@
 @import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_elevation.scss';
 @import '@/assets/styles/foundation/variable/_font.scss';
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
@@ -27,6 +28,14 @@
 
 .views-text {
   margin-bottom: 20px;
+}
+
+.views-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .views-button-list {
