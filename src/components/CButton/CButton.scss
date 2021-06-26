@@ -4,20 +4,15 @@
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
-
 .c-button {
-  @include transition(opacity);
   width: 100%;
   padding-right: 30px;
   padding-left: 32px;
   cursor: pointer;
-  opacity: 1;
-  &:hover {
-    opacity: 0.7;
-  }
 }
 
 .c-button__inner {
+  @include transition(background-color color);
   display: block;
   position: relative;
   width: 100%;
@@ -34,6 +29,7 @@
   }
   &::before,
   &::after {
+    @include transition(background-color);
     z-index: -1;
     content: '';
     display: block;
@@ -53,6 +49,7 @@
   }
   &.is-active {
     background-color: $accent_color;
+    color: #000;
     &::before,
     &::after {
       background-color: $accent_color;

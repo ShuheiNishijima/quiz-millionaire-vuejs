@@ -4,6 +4,7 @@ import CCutin from '@/components/CCutin/CCutin.vue'
 import CDialog from '@/components/CDialog/CDialog.vue'
 import CLogo from '@/components/CLogo/CLogo.vue'
 import CQuestion from '@/components/CQuestion/CQuestion.vue'
+import CScorePanel from '@/components/CScorePanel/CScorePanel.vue'
 import CStartButton from '@/components/CStartButton/CStartButton.vue'
 
 export default {
@@ -15,6 +16,7 @@ export default {
     CDialog,
     CLogo,
     CQuestion,
+    CScorePanel,
     CStartButton,
   },
   data() {
@@ -27,6 +29,10 @@ export default {
       check_dialog: false,
       correct_dialog: false,
       miss_dialog: false,
+      price: [
+        10_000, 20_000, 30_000, 50_000, 100_000, 150_000, 250_000, 500_000, 750_000, 1_000_000,
+        1_500_000, 2_500_000, 5_000_000, 7_500_000, 10_000_000,
+      ],
     }
   },
   methods: {
@@ -74,6 +80,7 @@ export default {
     },
     nextQuestion() {
       this.correct_dialog = false
+      this.selected = null
       setTimeout(() => {
         this.count++
       }, 300)

@@ -1,5 +1,8 @@
 <template>
   <div class="l-main">
+    <div class="view-header">
+      <c-score-panel v-if="playing" :price="price[count]" />
+    </div>
     <c-logo />
     <c-cutin :show="cutin" />
     <div class="views-start-button">

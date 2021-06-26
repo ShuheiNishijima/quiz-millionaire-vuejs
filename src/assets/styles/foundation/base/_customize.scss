@@ -17,14 +17,9 @@ html {
 
 body {
   line-height: 1.5;
-  background-color: $primary_color;
   font-size: $font_size_M;
-  @include media-sp {
-    box-shadow: 0 0 100px #000 inset;
-  }
-  @include media-pc {
-    box-shadow: 0 0 500px #000 inset;
-  }
+
+  background: $primary_color linear-gradient(90deg, rgba(#000, 0.8) 0%, rgba(#000, 0) 20%, rgba(#000, 0) 80%, rgba(#000, 0.8) 100%);
 }
 
 button {
