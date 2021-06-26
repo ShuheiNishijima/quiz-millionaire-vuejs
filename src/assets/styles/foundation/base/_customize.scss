@@ -11,13 +11,13 @@
 html {
   @include font-family;
   font-size: $font_size_init;
-  color: $main_color;
+  color: $secondary_color;
   word-break: break-all;
 }
 
 body {
   line-height: 1.5;
-  background-color: $base_color;
+  background-color: $primary_color;
   font-size: $font_size_M;
   @include media-sp {
     box-shadow: 0 0 100px #000 inset;

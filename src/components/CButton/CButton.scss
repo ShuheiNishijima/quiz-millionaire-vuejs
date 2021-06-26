@@ -23,8 +23,8 @@
   width: 100%;
   background-color: #000;
   text-align-last: left;
-  border-top: 2px solid $accent_color;
-  border-bottom: 2px solid $accent_color;
+  border-top: 2px solid $tertiary_color;
+  border-bottom: 2px solid $tertiary_color;
   @include media-sp {
     padding: 10px;
   }
@@ -42,7 +42,7 @@
     height: 45px;
     top: 50%;
     background-color: #000;
-    border: 2px solid $accent_color;
+    border: 2px solid $tertiary_color;
     transform: translateY(-50%) rotateZ(45deg);
   }
   &::before {
@@ -50,5 +50,12 @@
   }
   &::after {
     right: -23px;
+  }
+  &.is-active {
+    background-color: $accent_color;
+    &::before,
+    &::after {
+      background-color: $accent_color;
+    }
   }
 }

@@ -7,7 +7,12 @@
     </div>
     <div class="views-main">
       <c-question v-if="playing" :text="items[count].question" />
-      <c-choices v-if="playing" :items="items[count].choices" @click="selectChoice" />
+      <c-choices
+        v-if="playing"
+        :items="items[count].choices"
+        :active-index="selected"
+        @click="selectChoice"
+      />
     </div>
     <c-dialog :dialog="check_dialog">
       <p class="views-text">ファイナルアンサー？</p>

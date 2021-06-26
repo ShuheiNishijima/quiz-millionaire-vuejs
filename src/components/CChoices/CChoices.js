@@ -10,5 +10,9 @@ export default {
       type: Array,
       default: () => [],
     },
+    activeIndex: {
+      type: Number,
+      default: null,
+    },
   },
 }

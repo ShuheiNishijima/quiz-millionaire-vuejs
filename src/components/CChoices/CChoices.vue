@@ -1,7 +1,7 @@
 <template>
   <ul class="c-choices">
     <li v-for="(item, index) in items" :key="index" class="c-choices__item">
-      <c-button @click="$emit('click', index)">
+      <c-button :active="index === activeIndex" @click="$emit('click', index)">
         {{ item }}
       </c-button>
     </li>
