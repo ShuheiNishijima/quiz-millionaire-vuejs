@@ -4,39 +4,6 @@
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
-.views-main {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  @include media-sp {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  @include media-pc {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-.view-header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.views-start-button {
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-  transform: translateX(-50%);
-}
-
-.views-text {
-  margin-bottom: 20px;
-}
-
 .views-image {
   width: 100%;
   max-width: 400px;

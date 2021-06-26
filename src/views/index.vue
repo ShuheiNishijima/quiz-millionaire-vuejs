@@ -1,22 +1,19 @@
 <template>
   <div class="l-main">
-    <div class="view-header">
+    <i class="fas fa-users"></i>
+    <header>
       <c-score-panel v-if="playing" :price="price[count]" />
-    </div>
+    </header>
     <c-logo />
     <c-cutin :show="cutin" />
-    <div class="views-start-button">
-      <c-start-button v-if="!playing" @click="startHandler" />
-    </div>
-    <div class="views-main">
-      <c-question v-if="playing" :text="items[count].question" />
-      <c-choices
-        v-if="playing"
-        :items="items[count].choices"
-        :active-index="selected"
-        @click="selectChoice"
-      />
-    </div>
+    <c-start-button v-if="!playing" @click="startHandler" />
+    <c-question v-if="playing" :text="items[count].question" />
+    <c-choices
+      v-if="playing"
+      :items="items[count].choices"
+      :active-index="selected"
+      @click="selectChoice"
+    />
     <c-dialog :dialog="check_dialog">
       <p class="views-text">ファイナルアンサー？</p>
       <ul class="views-button-list">

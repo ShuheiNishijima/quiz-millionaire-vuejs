@@ -6,42 +6,24 @@
 
 .c-choices {
   width: 100%;
-  @include media-sp {
-    margin-bottom: 10px;
-  }
-  @include media-pc {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .c-choices__item {
-  @include media-sp {
-    width: 100%;
-  }
-  @include media-pc {
-    width: 50%;
-  }
-  &:not(:last-child) {
-    @include media-sp {
-      margin-bottom: 10px;
-    }
-  }
+  width: 50%;
   &:nth-child(1),
   &:nth-child(2) {
+    margin-bottom: 1.5rem;
+  }
+  &:nth-child(odd) {
     @include media-pc {
-      margin-bottom: 20px;
+      padding-right: 0.5rem;
     }
   }
-  &:nth-child(2n) {
+  &:nth-child(even) {
     @include media-pc {
-      padding-left: 10px;
-    }
-  }
-  &:nth-child(2n - 1) {
-    @include media-pc {
-      padding-right: 10px;
+      padding-left: 0.5rem;
     }
   }
 }

@@ -11,15 +11,14 @@
 html {
   @include font-family;
   font-size: $font_size_init;
-  color: $secondary_color;
+  color: #FFF;
   word-break: break-all;
 }
 
 body {
   line-height: 1.5;
   font-size: $font_size_M;
-
-  background: $primary_color linear-gradient(90deg, rgba(#000, 0.8) 0%, rgba(#000, 0) 20%, rgba(#000, 0) 80%, rgba(#000, 0.8) 100%);
+  background: #291580 linear-gradient(90deg, rgba(#000, 0.8) 0%, rgba(#000, 0) 20%, rgba(#000, 0) 80%, rgba(#000, 0.8) 100%);
 }
 
 button {

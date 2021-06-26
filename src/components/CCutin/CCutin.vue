@@ -4,9 +4,7 @@
       <div class="c-cutin__bg" />
       <div class="c-cutin">
         <transition name="slide">
-          <div v-show="show" class="c-cutin__inner">
-            <img class="c-cutin__image" src="/images/tame.jpg" alt="みの溜め" />
-          </div>
+          <img v-show="show" class="c-cutin__image" src="/images/tame.jpg" alt="みの溜め" />
         </transition>
       </div>
     </div>

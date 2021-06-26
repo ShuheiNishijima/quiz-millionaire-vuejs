@@ -5,32 +5,41 @@
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
 .c-logo {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
   @include media-sp {
-    width: 120%;
+    height: 200px;
+  }
+  @include media-pc {
+    height: 450px;
+  }
+}
+
+.c-logo__image {
+  display: block;
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  animation-name: rotate;
+  animation-duration: 180s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @include media-sp {
+    width: 110%;
   }
   @include media-pc {
     width: 80%;
   }
 }
 
-.c-logo__image {
-  animation-name: rotate;
-  animation-duration: 300s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  width: 100%;
-  height: auto;
-}
-
 @keyframes rotate {
   0% {
-    transform: rotateZ(0deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg);
   }
 }

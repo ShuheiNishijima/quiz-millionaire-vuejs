@@ -48,7 +48,6 @@ export default {
     restartHandler() {
       this.miss_dialog = false
       this.reset()
-      this.startHandler()
     },
     selectChoice(index) {
       this.selected = index

@@ -25,35 +25,14 @@
 
 }
 
-.c-cutin__inner {
+.c-cutin__image {
   display: block;
-  position: relative;
+  width: 100%;
   max-width: 480px;
-  height: 100%;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    top: 0;
-    background-color: #000;
-    transform: skewX(-20deg);
-  }
-  &::before {
-    right: 90%;
-  }
-  &::after {
-    left: 90%;
-  }
-}
-
-.c-cutin__image {
-  width: 100%;
-  height: auto;
+  clip-path: polygon(0 100%, 100px 0, 100% 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
 }
 
 .c-cutin__bg {

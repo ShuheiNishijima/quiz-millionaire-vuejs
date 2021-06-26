@@ -1,6 +1,8 @@
 <template>
   <button class="c-button" @click="$emit('click')">
-    <span :class="['c-button__inner', { 'is-active': active }]"><slot /></span>
+    <div :class="['c-button__inner', { 'is-active': active }]">
+      <span class="c-button__text"><slot /></span>
+    </div>
   </button>
 </template>
 
