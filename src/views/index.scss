@@ -6,13 +6,20 @@
 
 .views-header {
   z-index: $header;
-  display: flex;
-  justify-content: space-between;
+  @include media-pc {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .views-header__item {
   &:first-child {
-    min-width: 150px;
+    @include media-sp {
+      margin-bottom: 1rem;
+    }
+    @include media-pc {
+      min-width: 150px;
+    }
   }
 }
 

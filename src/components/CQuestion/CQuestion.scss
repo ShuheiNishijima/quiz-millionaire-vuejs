@@ -13,8 +13,10 @@
 }
 
 .c-question__inner {
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
   background: #291580 linear-gradient(0deg, rgba(#000, 0.8) 0%, rgba(#000, 0) 100%);
   clip-path: polygon(0 50%, 20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
-  font-size: 2.0rem;
+  @include media-pc {
+    font-size: 2.0rem;
+  }
 }
