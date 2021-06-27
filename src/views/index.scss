@@ -4,12 +4,27 @@
 @import '@/assets/styles/foundation/mixin/_animation.scss';
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
+.views-header {
+  z-index: $header;
+  display: flex;
+  justify-content: space-between;
+}
+
+.views-header__item {
+}
+
 .views-image {
   width: 100%;
   max-width: 400px;
   height: auto;
   margin-right: auto;
   margin-left: auto;
+}
+
+.views-text {
+  margin-bottom: 2rem;
+  font-size: $font_size_LL;
+  text-align: center;
 }
 
 .views-button-list {

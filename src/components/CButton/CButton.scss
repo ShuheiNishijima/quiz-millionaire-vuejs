@@ -7,9 +7,9 @@
 .c-button {
   @include transition(color);
   width: 100%;
+  padding: 2px;
   background: #FFF linear-gradient(45deg, rgba(#000, 0.7) 0%, rgba(#000, 0) 25%, rgba(#000, 0.7) 50%, rgba(#000, 0) 75%, rgba(#000, 0.7) 100%);
   clip-path: polygon(0 50%, 21px 0, calc(100% - 21px) 0, 100% 50%, calc(100% - 21px) 100%, 21px 100%);
-  padding: 2px;
   cursor: pointer;
   color: #FFF;
   :hover {

@@ -1,7 +1,9 @@
 <template>
   <div class="c-score-panel">
-    <p class="c-score-panel__title">TRIAL</p>
-    <div class="c-score-panel__price">{{ formatPrice(price) }}</div>
+    <div class="c-score-panel__inner">
+      <p class="c-score-panel__title">ＴＲＩＡＬ</p>
+      <div class="c-score-panel__price">￥{{ formatPrice(price) }}</div>
+    </div>
   </div>
 </template>
 

@@ -1,11 +1,10 @@
 <template>
   <transition name="fade">
-    <div v-show="dialog" class="c-dialog__outer">
-      <div class="c-dialog__bg" />
-      <dialog class="c-dialog">
+    <dialog v-show="dialog" class="c-dialog">
+      <div class="c-dialog__inner">
         <slot />
-      </dialog>
-    </div>
+      </div>
+    </dialog>
   </transition>
 </template>
 

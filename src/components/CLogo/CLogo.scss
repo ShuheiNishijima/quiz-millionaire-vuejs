@@ -5,6 +5,7 @@
 @import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
 
 .c-logo {
+  z-index: -1;
   position: relative;
   margin-right: auto;
   margin-left: auto;

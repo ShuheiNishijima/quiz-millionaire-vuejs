@@ -2,6 +2,7 @@ import CButton from '@/components/CButton/CButton.vue'
 import CChoices from '@/components/CChoices/CChoices.vue'
 import CCutin from '@/components/CCutin/CCutin.vue'
 import CDialog from '@/components/CDialog/CDialog.vue'
+import CLifelineGroup from '@/components/CLifelineGroup/CLifelineGroup.vue'
 import CLogo from '@/components/CLogo/CLogo.vue'
 import CQuestion from '@/components/CQuestion/CQuestion.vue'
 import CScorePanel from '@/components/CScorePanel/CScorePanel.vue'
@@ -14,6 +15,7 @@ export default {
     CChoices,
     CCutin,
     CDialog,
+    CLifelineGroup,
     CLogo,
     CQuestion,
     CScorePanel,
@@ -29,25 +31,24 @@ export default {
       check_dialog: false,
       correct_dialog: false,
       miss_dialog: false,
+      result_dialog: false,
       price: [
         10_000, 20_000, 30_000, 50_000, 100_000, 150_000, 250_000, 500_000, 750_000, 1_000_000,
         1_500_000, 2_500_000, 5_000_000, 7_500_000, 10_000_000,
       ],
     }
   },
+  computed: {
+    formatPrice() {
+      return (value) => (value >= 0 ? String(value).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') : 0)
+    },
+  },
   methods: {
-    async getQuizData() {
+    async startGame() {
       const REQUEST_URL = '/json/quiz.json'
       const response = await this.axios(REQUEST_URL)
       this.items = response.data.quiz[0].items
-    },
-    async startHandler() {
-      await this.getQuizData()
       this.playing = true
-    },
-    restartHandler() {
-      this.miss_dialog = false
-      this.reset()
     },
     selectChoice(index) {
       this.selected = index
@@ -84,11 +85,19 @@ export default {
         this.count++
       }, 300)
     },
+    result() {
+      this.correct_dialog = false
+      this.miss_dialog = false
+      this.result_dialog = true
+    },
     reset() {
       this.items = []
       this.playing = false
       this.count = 0
       this.selected = null
+      this.correct_dialog = false
+      this.miss_dialog = false
+      this.result_dialog = false
     },
   },
 }
