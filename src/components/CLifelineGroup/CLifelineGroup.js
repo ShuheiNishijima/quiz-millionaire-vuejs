@@ -5,4 +5,18 @@ export default {
   components: {
     CIcon,
   },
+  props: {
+    fiftyfifty: {
+      type: Boolean,
+      default: true,
+    },
+    audience: {
+      type: Boolean,
+      default: true,
+    },
+    telephone: {
+      type: Boolean,
+      default: true,
+    },
+  },
 }

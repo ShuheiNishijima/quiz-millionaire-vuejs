@@ -11,6 +11,9 @@
 }
 
 .views-header__item {
+  &:first-child {
+    min-width: 150px;
+  }
 }
 
 .views-image {
@@ -29,28 +32,20 @@
 
 .views-button-list {
   width: 100%;
-  @include media-pc {
-    display: flex;
-  }
+  display: flex;
+  justify-content: center;
 }
 
 .views-button-list__item {
-  @include media-pc {
-    width: 50%;
-  }
+  width: 50%;
   &:nth-child(odd) {
     @include media-pc {
-      padding-right: 10px;
+      padding-right: 0.5rem;
     }
   }
   &:nth-child(even) {
     @include media-pc {
-      padding-left: 10px;
-    }
-  }
-  &:not(:last-child) {
-    @include media-sp {
-      margin-bottom: 10px;
+      padding-left: 0.5rem;
     }
   }
 }

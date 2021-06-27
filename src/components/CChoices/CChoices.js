@@ -14,5 +14,9 @@ export default {
       type: Number,
       default: null,
     },
+    disabledIndex: {
+      type: Array,
+      default: () => [],
+    },
   },
 }

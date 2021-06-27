@@ -7,7 +7,7 @@
           "answer": 1,
           "choices": ["エレファント", "タイガー", "モンキー", "ベア"],
           "lifeline": {
-            "fiftyfifty": [1, 2],
+            "fiftyfifty": [0, 3],
             "audience": [1, 94, 2, 3]
           }
         },
@@ -16,7 +16,7 @@
           "answer": 3,
           "choices": ["花", "草", "土", "水"],
           "lifeline": {
-            "fiftyfifty": [2, 3],
+            "fiftyfifty": [0, 1],
             "audience": [5, 4, 7, 84]
           }
         },
@@ -25,7 +25,7 @@
           "answer": 3,
           "choices": ["チリ", "コスタリカ", "サウジアラビア", "エチオピア"],
           "lifeline": {
-            "fiftyfifty": [1, 3],
+            "fiftyfifty": [0, 2],
             "audience": [8, 33, 14, 45]
           }
         },
@@ -34,7 +34,7 @@
           "answer": 2,
           "choices": ["裁判員裁判", "墾田永年私財法", "裁判員制度", "生類憐れみの令"],
           "lifeline": {
-            "fiftyfifty": [0, 2],
+            "fiftyfifty": [1, 3],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -61,7 +61,7 @@
           "answer": 1,
           "choices": ["富山県", "新潟県", "栃木県", "群馬県"],
           "lifeline": {
-            "fiftyfifty": [0, 1],
+            "fiftyfifty": [2, 3],
             "audience": [20, 30, 25, 25]
           }
         },
@@ -70,7 +70,7 @@
           "answer": 3,
           "choices": ["寛永", "安政", "天明", "天保"],
           "lifeline": {
-            "fiftyfifty": [1, 3],
+            "fiftyfifty": [0, 2],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -79,7 +79,7 @@
           "answer": 3,
           "choices": ["扇千景", "土井たか子", "太田房江", "森山真弓"],
           "lifeline": {
-            "fiftyfifty": [0, 3],
+            "fiftyfifty": [1, 2],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -88,7 +88,7 @@
           "answer": 1,
           "choices": ["ロックフォール", "モッツァレラ", "カマンベール", "ゴルゴンゾーラ"],
           "lifeline": {
-            "fiftyfifty": [1, 2],
+            "fiftyfifty": [0, 3],
             "audience": [5, 60, 27, 8]
           }
         },
@@ -97,7 +97,7 @@
           "answer": 2,
           "choices": ["１９０６年", "１９１６年", "１９２６年", "１９３６年"],
           "lifeline": {
-            "fiftyfifty": [2, 3],
+            "fiftyfifty": [0, 1],
             "audience": [1, 1, 91, 7]
           }
         },
@@ -106,7 +106,7 @@
           "answer": 3,
           "choices": ["水泳", "柔道", "体操", "陸上"],
           "lifeline": {
-            "fiftyfifty": [1, 3],
+            "fiftyfifty": [0, 2],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -115,7 +115,7 @@
           "answer": 2,
           "choices": ["コーチ", "エトロ", "ロエベ", "バリー"],
           "lifeline": {
-            "fiftyfifty": [2, 3],
+            "fiftyfifty": [0, 1],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -124,7 +124,7 @@
           "answer": 1,
           "choices": ["黒柳徹子", "ペギー葉山", "由紀さおり", "梓みちよ"],
           "lifeline": {
-            "fiftyfifty": [1, 3],
+            "fiftyfifty": [0, 2],
             "audience": [34, 12, 45, 9]
           }
         },
@@ -133,7 +133,7 @@
           "answer": 3,
           "choices": ["ワインのグラス", "食べかけのパン", "肉の載った皿", "銀の入った袋"],
           "lifeline": {
-            "fiftyfifty": [1, 3],
+            "fiftyfifty": [0, 2],
             "audience": [34, 12, 45, 9]
           }
         }

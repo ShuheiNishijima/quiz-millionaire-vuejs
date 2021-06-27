@@ -26,21 +26,31 @@ export default {
       items: [],
       playing: false,
       count: 0,
+      correct_count: 0,
       selected: null,
+      disabled_choices: [],
       cutin: false,
       check_dialog: false,
       correct_dialog: false,
       miss_dialog: false,
+      finish_dialog: false,
       result_dialog: false,
+      fiftyfifty_dialog: false,
+      audience_dialog: false,
+      lifeline: {
+        fiftyfifty: true,
+        audience: true,
+        telephone: false,
+      },
       price: [
-        10_000, 20_000, 30_000, 50_000, 100_000, 150_000, 250_000, 500_000, 750_000, 1_000_000,
+        0, 10_000, 20_000, 30_000, 50_000, 100_000, 150_000, 250_000, 500_000, 750_000, 1_000_000,
         1_500_000, 2_500_000, 5_000_000, 7_500_000, 10_000_000,
       ],
     }
   },
   computed: {
     formatPrice() {
-      return (value) => (value >= 0 ? String(value).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') : 0)
+      return (value) => String(value).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
     },
   },
   methods: {
@@ -65,9 +75,11 @@ export default {
     correct() {
       this.check_dialog = false
       this.cutin = true
+      this.correct_count++
       setTimeout(() => {
         this.cutin = false
-        this.correct_dialog = true
+        if (this.items.length === this.correct_count) this.finish_dialog = true
+        else this.correct_dialog = true
       }, 3000)
     },
     miss() {
@@ -81,6 +93,7 @@ export default {
     nextQuestion() {
       this.correct_dialog = false
       this.selected = null
+      this.disabled_choices = []
       setTimeout(() => {
         this.count++
       }, 300)
@@ -88,16 +101,25 @@ export default {
     result() {
       this.correct_dialog = false
       this.miss_dialog = false
+      this.finish_dialog = false
       this.result_dialog = true
     },
     reset() {
       this.items = []
       this.playing = false
       this.count = 0
+      this.correct_count = 0
       this.selected = null
-      this.correct_dialog = false
+      this.disabled_choices = []
       this.miss_dialog = false
+      this.finish_dialog = false
       this.result_dialog = false
+      this.lifeline.fiftyfifty = true
+    },
+    fiftyfifty() {
+      this.fiftyfifty_dialog = false
+      this.lifeline.fiftyfifty = false
+      this.disabled_choices = this.items[this.count].lifeline.fiftyfifty
     },
   },
 }
