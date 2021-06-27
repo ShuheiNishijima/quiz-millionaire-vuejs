@@ -19,4 +19,9 @@ export default {
       default: () => [],
     },
   },
+  computed: {
+    alphabet() {
+      return ['A', 'B', 'C', 'D']
+    },
+  },
 }

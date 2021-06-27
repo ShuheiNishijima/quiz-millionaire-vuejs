@@ -6,7 +6,7 @@
         :disabled="disabledIndex.includes(index)"
         @click="$emit('click', index)"
       >
-        {{ item }}
+        {{ `${alphabet[index]}. ${item}` }}
       </c-button>
     </li>
   </ul>

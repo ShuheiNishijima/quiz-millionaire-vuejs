@@ -9,11 +9,15 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
+  animation-name: rotate;
+  animation-duration: 180s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   @include media-sp {
     height: 200px;
   }
   @include media-pc {
-    height: 450px;
+    height: 350px;
   }
 }
 
@@ -23,24 +27,20 @@
   height: auto;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
-  animation-name: rotate;
-  animation-duration: 180s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  transform: translate(-50%, -50%);
   @include media-sp {
-    width: 110%;
+    width: 350px;
   }
   @include media-pc {
-    width: 80%;
+    max-width: 600px;
   }
 }
 
 @keyframes rotate {
   0% {
-    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   100% {
-    transform: translateX(-50%) translateY(-50%) rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
