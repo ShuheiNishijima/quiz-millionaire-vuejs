@@ -1,9 +1,7 @@
-import CIcon from '@/components/CIcon/CIcon.vue'
-
 export default {
   name: 'CLifelineGroup',
   components: {
-    CIcon,
+    CIcon: () => import('@/components/CIcon/CIcon.vue'),
   },
   props: {
     fiftyfifty: {
