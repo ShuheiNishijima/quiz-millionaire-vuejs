@@ -47,7 +47,10 @@ export default {
                 beginAtZero: true,
                 min: 0,
                 max: 100,
-                stepSize: 10,
+                stepSize: 20,
+                callback: (value) => {
+                  return `${value}%`
+                },
               },
             },
           ],
