@@ -61,7 +61,7 @@ export default {
         labels: ['A', 'B', 'C', 'D'],
         datasets: [
           {
-            backgroundColor: '#f87979',
+            backgroundColor: '#D500F9',
             data: [item[0], item[1], item[2], item[3]],
           },
         ],
@@ -130,6 +130,7 @@ export default {
       this.finish_dialog = false
       this.result_dialog = false
       this.lifeline.fiftyfifty = true
+      this.lifeline.audience = true
     },
     fiftyfifty() {
       this.fiftyfifty_dialog = false

@@ -15,24 +15,35 @@ export default {
   computed: {
     options() {
       return {
-        responsive: true,
         legend: {
           display: false,
         },
-        // tooltips: {
-        //   enabled: false,
-        // },
-        scaleStartValue: 0,
+        tooltips: {
+          enabled: false,
+        },
         scales: {
-          yAxes: [
+          xAxes: [
             {
-              grid: {
-                color: ['#ffffff'],
-                gridColor: ['#ffffff'],
-                borderColor: ['#ffffff'],
+              barPercentage: 0.5,
+              gridLines: {
+                color: '#FFF',
               },
               ticks: {
-                color: '#f87979',
+                fontSize: 16,
+                fontColor: '#FFF',
+              },
+            },
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: '#FFF',
+              },
+              ticks: {
+                padding: 10,
+                autoSkip: false,
+                fontSize: 16,
+                fontColor: '#FFF',
                 beginAtZero: true,
                 min: 0,
                 max: 100,
