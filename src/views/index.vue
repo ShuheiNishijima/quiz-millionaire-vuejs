@@ -80,10 +80,19 @@
       </ul>
     </c-dialog>
     <c-dialog :dialog="audience_dialog">
-      <p class="views-text">オーディエンスは準備中です。</p>
+      <p class="views-text">オーディエンスを使いますか？</p>
+      <ul class="views-button-list">
+        <li class="views-button-list__item"><c-button @click="audience">使う</c-button></li>
+        <li class="views-button-list__item">
+          <c-button @click="audience_dialog = false">使わない</c-button>
+        </li>
+      </ul>
+    </c-dialog>
+    <c-dialog :dialog="chart_dialog">
+      <c-chart v-if="playing" :data="chartData" />
       <ul class="views-button-list">
         <li class="views-button-list__item">
-          <c-button @click="audience_dialog = false">閉じる</c-button>
+          <c-button @click="chart_dialog = false">閉じる</c-button>
         </li>
       </ul>
     </c-dialog>
