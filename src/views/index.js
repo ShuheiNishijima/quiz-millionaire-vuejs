@@ -1,4 +1,5 @@
 import CButton from '@/components/CButton/CButton.vue'
+import CChart from '@/components/CChart/CChart.vue'
 import CChoices from '@/components/CChoices/CChoices.vue'
 import CCutin from '@/components/CCutin/CCutin.vue'
 import CDialog from '@/components/CDialog/CDialog.vue'
@@ -12,6 +13,7 @@ export default {
   name: 'Index',
   components: {
     CButton,
+    CChart,
     CChoices,
     CCutin,
     CDialog,
@@ -37,6 +39,7 @@ export default {
       result_dialog: false,
       fiftyfifty_dialog: false,
       audience_dialog: false,
+      chart_dialog: false,
       lifeline: {
         fiftyfifty: true,
         audience: true,
@@ -51,6 +54,18 @@ export default {
   computed: {
     formatPrice() {
       return (value) => String(value).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
+    },
+    chartData() {
+      const item = this.items[this.count].lifeline.audience
+      return {
+        labels: ['A', 'B', 'C', 'D'],
+        datasets: [
+          {
+            backgroundColor: '#D500F9',
+            data: [item[0], item[1], item[2], item[3]],
+          },
+        ],
+      }
     },
   },
   methods: {
@@ -115,11 +130,17 @@ export default {
       this.finish_dialog = false
       this.result_dialog = false
       this.lifeline.fiftyfifty = true
+      this.lifeline.audience = true
     },
     fiftyfifty() {
       this.fiftyfifty_dialog = false
       this.lifeline.fiftyfifty = false
       this.disabled_choices = this.items[this.count].lifeline.fiftyfifty
+    },
+    audience() {
+      this.audience_dialog = false
+      this.lifeline.audience = false
+      this.chart_dialog = true
     },
   },
 }
