@@ -24,7 +24,6 @@ export default {
         scales: {
           xAxes: [
             {
-              barPercentage: 0.5,
               gridLines: {
                 color: '#FFF',
               },

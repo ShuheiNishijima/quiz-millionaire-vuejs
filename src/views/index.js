@@ -61,6 +61,7 @@ export default {
         labels: ['A', 'B', 'C', 'D'],
         datasets: [
           {
+            barPercentage: 0.5,
             backgroundColor: '#D500F9',
             data: [item[0], item[1], item[2], item[3]],
           },
